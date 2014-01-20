@@ -1,5 +1,5 @@
 #import "Stream.h"
-#import <Cordova/CDVViewController.h>
+#import "CDVViewController+FirstResponder.h"
 
 @implementation Stream
 
@@ -8,7 +8,7 @@
 - (void) play:(CDVInvokedUrlCommand*)command
 {
     UIApplication *application = [UIApplication sharedApplication];
-	if([application respondsToSelector:@selector(beginReceivingRemoteControlEvents)]){
+    if([application respondsToSelector:@selector(beginReceivingRemoteControlEvents)]){
         [application beginReceivingRemoteControlEvents];
     }
     CDVViewController* viewController = (CDVViewController*)[self viewController];
@@ -71,21 +71,21 @@
 
 - (void)receiveRemoteControlEvents:(UIEvent *)event {
     switch (event.subtype) {
-		case UIEventSubtypeRemoteControlTogglePlayPause:
-			[streamer pause];
-			break;
-		case UIEventSubtypeRemoteControlPlay:
-			[streamer start];
-			break;
-		case UIEventSubtypeRemoteControlPause:
-			[streamer pause];
-			break;
-		case UIEventSubtypeRemoteControlStop:
-			[streamer stop];
-			break;
-		default:
-			break;
-	}
+        case UIEventSubtypeRemoteControlTogglePlayPause:
+            [streamer pause];
+            break;
+        case UIEventSubtypeRemoteControlPlay:
+            [streamer start];
+            break;
+        case UIEventSubtypeRemoteControlPause:
+            [streamer pause];
+            break;
+        case UIEventSubtypeRemoteControlStop:
+            [streamer stop];
+            break;
+        default:
+            break;
+    }
 }
 
 -(void) destroyStream {

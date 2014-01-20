@@ -28,6 +28,8 @@
                         </feature>
                 </config-file>
 
+                <header-file src="src/ios/CDVViewController+FirstResponder.h" />
+                <source-file src="src/ios/CDVViewController+FirstResponder.m" />
                 <header-file src="src/ios/Stream.h" />
                 <source-file src="src/ios/Stream.m" />
 

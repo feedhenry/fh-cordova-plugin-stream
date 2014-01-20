@@ -2,6 +2,7 @@
 
 #import <Cordova/CDVPlugin.h>
 #import "AudioStreamer.h"
+#import "CDVViewController+FirstResponder.h"
 
 @interface Stream : CDVPlugin
 {
