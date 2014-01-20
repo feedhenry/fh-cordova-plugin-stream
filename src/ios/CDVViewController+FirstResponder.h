@@ -10,7 +10,6 @@
 
 @interface CDVViewController (FirstResponder)
 
-@property (nonatomic, strong) CDVPlugin * responder;
-- (void) setResponder:(CDVPlugin*) responder;
+@property (nonatomic, retain) CDVPlugin* responder;
 
 @end

@@ -7,20 +7,27 @@
 //
 
 #import "CDVViewController+FirstResponder.h"
+#import <objc/runtime.h>
 
 @implementation CDVViewController (FirstResponder)
 
-@dynamic responder;
+static char KEY;
+
+- (void) setResponder:(CDVPlugin*) aResponder
+{
+  objc_setAssociatedObject(self, &KEY, aResponder, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 - (BOOL)canBecomeFirstResponder {
-	return YES;
+  return YES;
 }
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-  if(self.responder){
+  id responder = objc_getAssociatedObject(self, &KEY);
+  if(responder){
     SEL remoteSelector = @selector(receiveRemoteControlEvents:);
-    if([self.responder respondsToSelector:remoteSelector]){
-      [self.responder performSelector:remoteSelector withObject:event];
+    if([responder respondsToSelector:remoteSelector]){
+      [responder performSelector:remoteSelector withObject:event];
     }
   }
 }
