@@ -34,7 +34,7 @@
                 <header-file src="src/ios/AudioStreamer/AudioStreamer.h" compiler-flags="-fno-objc-arc"/>
                 <source-file src="src/ios/AudioStreamer/AudioStreamer.m" compiler-flags="-fno-objc-arc"/>
                 <header-file src="src/ios/AudioStreamer/UIDevice+Hardware.h" compiler-flags="-fno-objc-arc"/>
-                <source-file src="src/ios/AudioStreamer/UIDevice+Hardware.h" compiler-flags="-fno-objc-arc"/>
+                <source-file src="src/ios/AudioStreamer/UIDevice+Hardware.m" compiler-flags="-fno-objc-arc"/>
         </platform>
 
 </plugin>
