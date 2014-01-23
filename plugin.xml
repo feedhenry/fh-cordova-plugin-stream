@@ -37,6 +37,10 @@
                 <source-file src="src/ios/AudioStreamer/AudioStreamer.m" compiler-flags="-fno-objc-arc"/>
                 <header-file src="src/ios/AudioStreamer/UIDevice+Hardware.h" compiler-flags="-fno-objc-arc"/>
                 <source-file src="src/ios/AudioStreamer/UIDevice+Hardware.m" compiler-flags="-fno-objc-arc"/>
+
+                <framework src="UIKit.framework" />
+                <framework src="CFNetwork.framework" />
+                <framework src="Foundation.framework" weak="true" />
         </platform>
 
 </plugin>
