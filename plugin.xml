@@ -51,10 +51,10 @@
                         </feature>
                 </config-file>
 
-                <source-file src="src/android/Audio.java" target-dir="com/feedhenry/phonegap/audio" />
-                <source-file src="src/android/AudioLocal.java" target-dir="com/feedhenry/phonegap/audio" />
-                <source-file src="src/android/AudioMgt.java" target-dir="com/feedhenry/phonegap/audio" />
-                <source-file src="src/android/AudioStreaming.java" target-dir="com/feedhenry/phonegap/audio" />
+                <source-file src="src/android/Audio.java" target-dir="src/com/feedhenry/phonegap/audio" />
+                <source-file src="src/android/AudioLocal.java" target-dir="src/com/feedhenry/phonegap/audio" />
+                <source-file src="src/android/AudioMgt.java" target-dir="src/com/feedhenry/phonegap/audio" />
+                <source-file src="src/android/AudioStreaming.java" target-dir="src/com/feedhenry/phonegap/audio" />
         </platform>
 
 </plugin>
