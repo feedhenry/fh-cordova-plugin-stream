@@ -15,11 +15,6 @@
                 <engine name="cordova" version=">=2.8.0" />
         </engines>
 
-
-        <js-module src="www/StreamManager.js" name="StreamManager">
-                <clobbers target="StreamManager" />
-        </js-module>
-
         <!-- ios -->
         <platform name="ios">
                 <config-file target="config.xml" parent="/*">
@@ -27,6 +22,10 @@
                                 <param name="ios-package" value="Stream" />
                         </feature>
                 </config-file>
+
+                <js-module src="www/ios/StreamManager.js" name="StreamManager">
+                        <clobbers target="StreamManager" />
+                </js-module>
 
                 <header-file src="src/ios/CDVViewController+FirstResponder.h" />
                 <source-file src="src/ios/CDVViewController+FirstResponder.m" />
@@ -50,6 +49,10 @@
                                 <param name="android-package" value="com.feedhenry.phonegap.audio.AudioMgt" />
                         </feature>
                 </config-file>
+
+                <js-module src="www/android/StreamManager.js" name="StreamManager">
+                        <clobbers target="StreamManager" />
+                </js-module>
 
                 <source-file src="src/android/Audio.java" target-dir="src/com/feedhenry/phonegap/audio" />
                 <source-file src="src/android/AudioLocal.java" target-dir="src/com/feedhenry/phonegap/audio" />
