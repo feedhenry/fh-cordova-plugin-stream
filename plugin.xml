@@ -54,6 +54,10 @@
                         <clobbers target="StreamManager" />
                 </js-module>
 
+                <config-file target="AndroidManifest.xml" parent="/*">
+                   <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+                </config-file>
+
                 <source-file src="src/android/Audio.java" target-dir="src/com/feedhenry/phonegap/audio" />
                 <source-file src="src/android/AudioLocal.java" target-dir="src/com/feedhenry/phonegap/audio" />
                 <source-file src="src/android/AudioMgt.java" target-dir="src/com/feedhenry/phonegap/audio" />
