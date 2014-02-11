@@ -193,11 +193,11 @@ public class AudioMgt extends CordovaPlugin implements OnBufferingUpdateListener
 	public void jsCallBack(int type, String act, String message) {
 		switch (type) {
 		case 0:
-			this.webView.loadUrl("javascript: navigator.audio.success('" + act
+			this.webView.loadUrl("javascript: window.plugins.stream.success('" + act
 					+ "','" + message + "')");
 			break;
 		case 1:
-			this.webView.loadUrl("javascript: navigator.audio.failure('" + act
+			this.webView.loadUrl("javascript: window.plugins.stream.failure('" + act
 					+ "','" + message + "')");
 			break;
 		}
